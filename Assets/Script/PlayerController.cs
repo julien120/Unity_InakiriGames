@@ -29,6 +29,10 @@ public class PlayerController : BaseCharacterController
     //public GameObject steak;
 
 
+    //会話イベント時にプレイヤーの動きを止める変数
+    public bool controllEnabled { get; set; } = true;
+
+
 
     protected override void Start()
     {
@@ -39,7 +43,9 @@ public class PlayerController : BaseCharacterController
     }
     protected override void Update()
     {
+        if(controllEnabled == true) { 
         GetInput();
+        }
     }
     protected override void FixedUpdate()
     {
@@ -133,25 +139,6 @@ public class PlayerController : BaseCharacterController
         {
             Damage();
         }
-
-
-    //    if (collision.gameObject.CompareTag("Steak"))
-    //    {
-    //        //上に以下の変数を設定している！
-    //        //float steakCount;
-    //        //public Text steakUI;
-    //        ////public GameObject[] steak= new GameObject[6];//コメントアウト
-    //        //public GameObject steak;
-
-    //steakCount += 300;
-    //        //Debug.Log(steakCount);
-
-    //        steakUI.text = "肉マイレージ数：" + steakCount.ToString("f0") + "g";
-
-    //        steak.SetActive(false);
-    //        //steakにアタッチしているオブジェクトはsteakのみなのでこうなる
-
-    //    }
 
 
     }
