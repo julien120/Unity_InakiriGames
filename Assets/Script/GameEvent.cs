@@ -8,6 +8,8 @@ using UnityEditor;
 
 public class GameEvent : MonoBehaviour
 {
+    BaseCharacterController bcs;
+
     [Tooltip("イベント開始時の処理")]
     [SerializeField] UnityEvent startEvent;
 
@@ -19,6 +21,7 @@ public class GameEvent : MonoBehaviour
 
     public void Play()
     {
+        //bcs.isActive = false;
         StartCoroutine(Progress());
     }
 
@@ -64,7 +67,9 @@ public class GameEventEditor : Editor
         if( isStartEnd )
         {
             EditorGUILayout.PropertyField(serializedObject.FindProperty("startEvent"));
+            
             EditorGUILayout.PropertyField(serializedObject.FindProperty("endEvent"));
+
         }
 
         reorderableList.DoLayoutList();
