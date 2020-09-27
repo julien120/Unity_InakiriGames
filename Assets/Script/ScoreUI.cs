@@ -7,8 +7,8 @@ public class ScoreUI : MonoBehaviour
 {
     public int steakCount;
     public Text steakUI;
-
-
+    public Text rankCountUI;
+    int rank;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +19,10 @@ public class ScoreUI : MonoBehaviour
     void Update()
     {
         steakUI.text = "肉マイレージ数：" + steakCount.ToString("f0") + "g";
+        rank = (int)(10000000/steakCount*0.8);
+        rankCountUI.text = "肉マイレージ総合ランキング：" + rank + "位";
+
     }
 
-    public void count()
-    {
-        Debug.Log("SendMessageメソッド使えてる！");
-        //steakUI.text = "肉マイレージ数：" + steakCount.ToString("f0") + "g";
-    }
+    
 }

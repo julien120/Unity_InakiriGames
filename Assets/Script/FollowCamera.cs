@@ -24,7 +24,7 @@ public class FollowCamera : MonoBehaviour
     {
         //横方向だけ追従する場合はtransform.position.y
         //カメラのpositionにゲームオブジェクトPlayerの座標を代入する
-        //transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y, transform.position.z);
-        transform.position = new Vector3(playerTransform.position.x, transform.position.y, transform.position.z);
+        transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y+3, transform.position.z);
+        //transform.position = new Vector3(playerTransform.position.x, transform.position.y, transform.position.z);
     }
 }
