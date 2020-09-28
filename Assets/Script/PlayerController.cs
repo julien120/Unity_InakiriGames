@@ -141,10 +141,10 @@ public class PlayerController : BaseCharacterController
     //敵に触れたらダメージ
     protected void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Damage();
-        }
+       // if (collision.gameObject.CompareTag("Enemy"))
+        //{
+           // Damage();
+        //}
 
 
     }
