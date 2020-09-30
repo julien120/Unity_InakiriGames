@@ -33,7 +33,7 @@ public class TitleScene : MonoBehaviour
     {
         //インスペクタ上でOnClick操作をするがスクリプトからButtonクリックでscene変遷できないか？
 
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("StageChoice");
     }
 
     public void howbtn()
