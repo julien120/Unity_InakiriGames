@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class ScoreUI : MonoBehaviour
 {
-    public int steakCount;
+    public static int steakCount;
     public Text steakUI;
     public Text rankCountUI;
-    int rank;
+   public static int rank = 4000;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        DontDestroyOnLoad(this);
     }
 
     // Update is called once per frame

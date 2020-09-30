@@ -9,13 +9,13 @@ public class SteakItem : MonoBehaviour
     //public Text steakUI;
     public GameObject steak;
     public GameObject UI;
-    ScoreUI scoreUI;
+    //ScoreUI scoreUI;
 
     // Start is called before the first frame update
     void Start()
     {
         //cs型変数名 = GameObject型変数名.GetComponent<cs名>();
-        scoreUI = UI.GetComponent<ScoreUI>();
+        //scoreUI = UI.GetComponent<ScoreUI>();
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class SteakItem : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            scoreUI.steakCount += 300;
+            ScoreUI.steakCount += 300;
             //gameObject.SendMessage("count", 300,SendMessageOptions.DontRequireReceiver);
             //steakCount += 300;
             //Debug.Log(steakCount);
