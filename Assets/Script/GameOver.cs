@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
@@ -14,9 +15,11 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.transform.position.y < -6.6f)
+        if(player.transform.position.y < -10.6f)
         {
             Debug.Log("gameOver");
+            //コルーチンでゲームオーバー表示してから数秒後にとかの方がいいのかな？
+            SceneManager.LoadScene("Stagechoice");
         }
     }
 }
