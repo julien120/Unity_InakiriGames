@@ -18,6 +18,6 @@ public class enemyController : MonoBehaviour
 
     public void enemyAction()
     {
-        this.gameObject.transform.Translate(Random.Range(-6,6), 0, 0);
+        this.gameObject.transform.Translate(Random.Range(-9,6), 0, 0);
     }
 }

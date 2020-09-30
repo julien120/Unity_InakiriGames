@@ -8,6 +8,7 @@ using UnityEditor;
 
 public class GameEvent : MonoBehaviour
 {
+    public bool BattleTransition = false;
     BaseCharacterController bcs;
 
     [Tooltip("イベント開始時の処理")]
@@ -83,6 +84,7 @@ public class GameEventEditor : Editor
             serializedObject.ApplyModifiedProperties();
         }
     }
+
 }
 
 #endif
