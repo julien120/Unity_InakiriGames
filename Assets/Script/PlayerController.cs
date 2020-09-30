@@ -108,9 +108,12 @@ public class PlayerController : BaseCharacterController
         //ヒットポイントを-1
         //Hpプロパティにより、HPが0になると自動的にDead()が呼ばれる（※BaseCharacterController参照）
         Hp--;
+        GameOver.DecreaseHp();
+        //GameOver.hpGauge.GetComponent<Image>().fillAmount -= 0.1f;
         if (Hp > 0)
         {
             StartCoroutine("DamageTimer");
+            
         }
 
     }
@@ -153,6 +156,7 @@ public class PlayerController : BaseCharacterController
     protected override void Dead()
     {
         isActive = false;
+        GameOver.GameeOver();
     }
     protected override void UpdateAnimation()
     {

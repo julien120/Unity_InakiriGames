@@ -2,14 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
     GameObject player;
+    public static GameObject hpGauge;
+    //public GameObject hp;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
+        hpGauge = GameObject.Find("hp_Gauge");
+    }
+    public static void DecreaseHp()
+    {
+        hpGauge.GetComponent<Image>().fillAmount -= 0.25f;
     }
 
     // Update is called once per frame
@@ -22,4 +30,11 @@ public class GameOver : MonoBehaviour
             SceneManager.LoadScene("Stagechoice");
         }
     }
+
+
+    public static void GameeOver()
+    {
+        SceneManager.LoadScene("Stagechoice");
+    }
+
 }
