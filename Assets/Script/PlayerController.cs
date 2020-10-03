@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -22,6 +23,9 @@ public class PlayerController : BaseCharacterController
     SpriteRenderer spriteRenderer;
     Rigidbody2D rigidBody2D;
 
+    GameOver gameover;
+    public GameObject god;
+    float step_time =0;
 
     //float steakCount;
     //public Text steakUI;
@@ -36,6 +40,7 @@ public class PlayerController : BaseCharacterController
 
     protected override void Start()
     {
+       gameover=god.GetComponent<GameOver>();
         base.Start();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -156,7 +161,10 @@ public class PlayerController : BaseCharacterController
     protected override void Dead()
     {
         isActive = false;
-        GameOver.GameeOver();
+        gameover.canvass.SetActive(true);
+        SceneManager.LoadScene("Stagechoice");
+
+
     }
     protected override void UpdateAnimation()
     {

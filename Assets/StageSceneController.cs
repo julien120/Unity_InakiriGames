@@ -36,4 +36,14 @@ public class StageSceneController : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void stage2()
+    {
+        SceneManager.LoadScene("stage2");
+    }
+
+    public void stage3()
+    {
+        SceneManager.LoadScene("stage3");
+    }
 }

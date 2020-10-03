@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BaseCharacterController : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class BaseCharacterController : MonoBehaviour
 	protected bool isGrounded = false;
 	protected bool isGroundedPrev = false;
 	protected float direction = 1;
+	float step_time = 0;
 
 	public int Hp
 	{
@@ -35,6 +37,12 @@ public class BaseCharacterController : MonoBehaviour
 			if(hp <= 0)
 			{
 				Dead();
+				step_time += Time.deltaTime;
+
+				if (step_time > 1.0f)
+				{
+					SceneManager.LoadScene("Stagechoice");
+				}
 			}
 		}
 		get

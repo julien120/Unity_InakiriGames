@@ -8,7 +8,7 @@ public class GameOver : MonoBehaviour
 {
     GameObject player;
     public static GameObject hpGauge;
-    [SerializeField] public  static GameObject canvass;
+    public   GameObject canvass;
     //public GameObject hp;
     // Start is called before the first frame update
     void Start()
@@ -23,12 +23,12 @@ public class GameOver : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   public  void Update()
     {
         if(player.transform.position.y < -10.6f)
         {
             Debug.Log("gameOver");
-            canvass.SetActive(true);
+         canvass.SetActive(true);
             //コルーチンでゲームオーバー表示してから数秒後にとかの方がいいのかな？
             StartCoroutine("sceneTransition");
             //SceneManager.LoadScene("Stagechoice");
@@ -40,7 +40,7 @@ public class GameOver : MonoBehaviour
     {
 //        canvass.SetActive(true);
         SceneManager.LoadScene("Stagechoice");
-
+        
         //staticじゃないから出来ないとでる。でもstaticにするとアタッチできない
         //texttrue();
     }
@@ -51,14 +51,14 @@ public class GameOver : MonoBehaviour
         SceneManager.LoadScene("Stagechoice");
     }
 
-    public void texttrue()
-    {
-        Debug.Log("gameOver");
-        canvass.SetActive(true);
-        //コルーチンでゲームオーバー表示してから数秒後にとかの方がいいのかな？
-        StartCoroutine("sceneTransition");
-        //SceneManager.LoadScene("Stagechoice");
-    }
+    //public void texttrue()
+    //{
+    //    Debug.Log("gameOver");
+    //    canvass.SetActive(true);
+    //    //コルーチンでゲームオーバー表示してから数秒後にとかの方がいいのかな？
+    //    StartCoroutine("sceneTransition");
+    //    //SceneManager.LoadScene("Stagechoice");
+    //}
 
 
 

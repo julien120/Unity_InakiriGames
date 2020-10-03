@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &30180502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1427,6 +1427,7 @@ MonoBehaviour:
   - {fileID: 998174067}
   horizontalInputName: Horizontal
   jumpButtonName: Jump
+  god: {fileID: 1288875117}
 --- !u!1 &783269596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,7 +1476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &834458867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2051,6 +2052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd528f8f897b84dd18835333df6881e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvass: {fileID: 834458866}
 --- !u!4 &1288875119
 Transform:
   m_ObjectHideFlags: 0
@@ -2834,7 +2836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1592534075
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3612,7 +3614,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "\u3053\u306E\u5148\u306B\u306F\u30E9\u30F3\u30AB\u30FC\u7834\u308A\u3067\u6709\u540D\u306A\u30C9\u30A4\u30C4\u7DCF\u5408\u30E9\u30F3\u30AD\u30F3\u30B01\u4F4D\u30D6\u30ED\u30C3\u30B1\u30F3Jr.\u304C\u304A\u308B"
+          m_StringArgument: "\u3053\u306E\u5148\u306B\u306F\u3044\u304D\u306A\u308A\u30B9\u30C6\u30FC\u30AD\u30A2\u30E1\u30EA\u30AB\u5E97\u306E\u8987\u8005\u3075\u304F\u305F\u3093\u304C\u304A\u308B"
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -3631,6 +3633,32 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1471771166}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 293774851}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1963825613}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
