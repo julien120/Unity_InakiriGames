@@ -8,7 +8,7 @@ public class GameOver : MonoBehaviour
 {
     GameObject player;
     public static GameObject hpGauge;
-    public  GameObject canvass;
+    [SerializeField] public  static GameObject canvass;
     //public GameObject hp;
     // Start is called before the first frame update
     void Start()
@@ -38,8 +38,10 @@ public class GameOver : MonoBehaviour
 
     public static void GameeOver()
     {
-        //canvass.SetActive(true);
+//        canvass.SetActive(true);
         SceneManager.LoadScene("Stagechoice");
+
+        //staticじゃないから出来ないとでる。でもstaticにするとアタッチできない
         //texttrue();
     }
 
