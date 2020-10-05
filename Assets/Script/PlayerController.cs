@@ -25,7 +25,7 @@ public class PlayerController : BaseCharacterController
 
     GameOver gameover;
     public GameObject god;
-    float step_time =0;
+    //float step_time =0;
 
     //float steakCount;
     //public Text steakUI;
@@ -45,6 +45,7 @@ public class PlayerController : BaseCharacterController
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidBody2D = GetComponent<Rigidbody2D>();
+        
     }
     protected override void Update()
     {
@@ -153,16 +154,28 @@ public class PlayerController : BaseCharacterController
         {
             Damage();
         }
+        if (collision.gameObject.CompareTag("dead"))
+        {
+            Debug.Log("そくし");
+            Dead();
+        }
 
 
     }
+    IEnumerator sceneTransition()
+    {
+        yield return new WaitForSeconds(7);
+        SceneManager.LoadScene("Stagechoice");
+    }
+
+
 
 
     protected override void Dead()
     {
         isActive = false;
         gameover.canvass.SetActive(true);
-        SceneManager.LoadScene("Stagechoice");
+         StartCoroutine("sceneTransition");
 
 
     }
@@ -175,3 +188,4 @@ public class PlayerController : BaseCharacterController
 
 
     }
+

@@ -25,14 +25,14 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
    public  void Update()
     {
-        if(player.transform.position.y < -10.6f)
-        {
-            Debug.Log("gameOver");
-         canvass.SetActive(true);
+        //if(player.transform.position.y < -5100.6f)
+       // {
+       //     Debug.Log("gameOver");
+       //  canvass.SetActive(true);
             //コルーチンでゲームオーバー表示してから数秒後にとかの方がいいのかな？
-            StartCoroutine("sceneTransition");
+        //    StartCoroutine("sceneTransition");
             //SceneManager.LoadScene("Stagechoice");
-        }
+        //}
     }
 
 
