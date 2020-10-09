@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - dead
   - waypointCollider
+  - fishBoss
   layers:
   - Default
   - TransparentFX

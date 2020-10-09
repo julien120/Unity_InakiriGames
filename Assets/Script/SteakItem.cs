@@ -24,7 +24,15 @@ public class SteakItem : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("fishBoss"))
+        {
 
+            Destroy(steak);
+
+        }
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -38,6 +46,12 @@ public class SteakItem : MonoBehaviour
             //steakUI.text = "肉マイレージ数：" + steakCount.ToString("f0") + "g";
 
             //steak.SetActive(false);
+            Destroy(steak);
+
+        }
+        if (collision.gameObject.CompareTag("fishBoss"))
+        {
+            
             Destroy(steak);
 
         }
