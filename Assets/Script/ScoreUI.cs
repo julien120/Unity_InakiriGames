@@ -20,7 +20,7 @@ public class ScoreUI : MonoBehaviour
     void Update()
     {
         steakUI.text = "肉マイレージ数：" + steakCount.ToString("f0") + "g";
-        rank = (int)(10000-steakCount*0.45);
+        rank = (int)(99000-steakCount*0.45);
         rankCountUI.text = "肉マイレージ総合ランキング：" + rank + "位";
 
     }
