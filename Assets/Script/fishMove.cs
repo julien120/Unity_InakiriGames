@@ -9,7 +9,7 @@ public class fishMove : MonoBehaviour
     // private NavMeshAgent agent;     //エージェントとなるオブジェクトのNavMeshAgent格納用
 
    // public Vector3[] waypoint = new Vector3[4];
-    public GameObject[] waypoint = new GameObject[4];
+    public GameObject[] waypoint = new GameObject[5];
    // private Rigidbody2D rb = null;
     int count = 0;
     GameObject target;
@@ -27,22 +27,41 @@ public class fishMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.position = Vector2.MoveTowards(transform.position, waypoint[count].transform.position, 10 * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, waypoint[count].transform.position, 10 * Time.deltaTime);
         
-
     }
 
-  
+
     private void OnTriggerEnter2D(Collider2D coll)
     {
         Debug.Log("判定");
-        if (coll.gameObject.CompareTag("waypointCollider"))
+        if (coll.gameObject.name == "wayCollider")
         {
-           Debug.Log("wayポイント更新" + count);
-            transform.position = Vector2.MoveTowards(transform.position, waypoint[count].transform.position, 10 * Time.deltaTime);
-         
-            // count++;
+            count++;
             Debug.Log("wayポイント更新" + count);
+            Debug.Log(waypoint[count].transform.position);
+            this.gameObject.GetComponent<SpriteRenderer>().flipX=true;
+
+        }
+        if (coll.gameObject.name == "wayCollider (1)")
+        {
+            count++;
+            Debug.Log("wayポイント更新あ" + count);
+            transform.position = Vector2.MoveTowards(transform.position, waypoint[count].transform.position, 10 * Time.deltaTime);
+        }
+        if (coll.gameObject.name == "wayCollider2")
+        {
+            count++;
+            Debug.Log("wayポイント更新ああ" + count);
+            transform.position = Vector2.MoveTowards(transform.position, waypoint[count].transform.position, 10 * Time.deltaTime);
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        }
+        if (coll.gameObject.name == "wayCollider (3)")
+        {
+            count++;
+            Debug.Log("wayポイント更新あああ" + count);
+
+            transform.position = Vector2.MoveTowards(transform.position, waypoint[count].transform.position, 10 * Time.deltaTime);
         }
     }
 }
