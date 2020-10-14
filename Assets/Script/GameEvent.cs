@@ -33,7 +33,8 @@ public class GameEvent : MonoBehaviour
         foreach( var ev in events)
         {
             ev.Invoke();
-            yield return new WaitUntil(()=> Input.GetButtonDown("Fire1"));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+            //yield return new WaitUntil(()=> Input.GetButtonDown("Fire1"));
             yield return null;
         }
 
