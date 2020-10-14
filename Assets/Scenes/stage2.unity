@@ -1538,7 +1538,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2125,7 +2125,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2274,7 +2274,7 @@ MonoBehaviour:
   maxHP: 3
   defaultSpeed: 12
   defaultPower: 0
-  jumpPower: 16
+  jumpPower: 10
   groundCheckObjects:
   - {fileID: 783269596}
   - {fileID: 1206225482}
@@ -2295,7 +2295,7 @@ MonoBehaviour:
   maxHP: 4
   defaultSpeed: 12
   defaultPower: 0
-  jumpPower: 16
+  jumpPower: 10
   groundCheckObjects:
   - {fileID: 783269596}
   - {fileID: 1206225482}
