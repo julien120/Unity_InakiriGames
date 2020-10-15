@@ -9,7 +9,7 @@ public class HitGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        speed = 10.0f;
     }
 
     // Update is called once per frame
@@ -19,19 +19,24 @@ public class HitGenerator : MonoBehaviour
         {
 
             // 弾（ゲームオブジェクト）の生成
-            GameObject clone = Instantiate(ball[Random.Range(0,4)]) as GameObject;
+           // GameObject clone = Instantiate(ball, transform.position, Quaternion.identity);
+            GameObject clone = Instantiate(ball[Random.Range(0,4)], transform.position, Quaternion.identity) as GameObject;
 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Vector3 worldDir = ray.direction;
+
             // クリックした座標の取得（スクリーン座標からワールド座標に変換）
-            // Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             // 向きの生成（Z成分の除去と正規化）
-            //Vector3 shotForward = Vector3.Scale((mouseWorldPos - transform.position), new Vector3(1, 1, 0)).normalized;
+            Vector3 shotForward = Vector3.Scale((mouseWorldPos - transform.position), new Vector3(1, 1, 0)).normalized;
 
             // 弾に速度を与える
-            //clone.GetComponent<Rigidbody2D>().velocity = shotForward * speed;
-            clone.GetComponent<hitController>().shoot(worldDir.normalized * 20000);
+            clone.GetComponent<Rigidbody2D>().velocity = shotForward * speed;
+
+
+           // 別のやり方
+            // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            // Vector3 worldDir = ray.direction;
+           // clone.GetComponent<hitController>().shoot(worldDir.normalized * 20000);
 
 
         }
