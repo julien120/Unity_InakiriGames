@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HitGenerator : MonoBehaviour
 {
+    public GameObject Canvas;
     public GameObject[] ball= new GameObject[3];
     float speed;
     // Start is called before the first frame update
@@ -40,5 +43,18 @@ public class HitGenerator : MonoBehaviour
 
 
         }
+
+        if (GameOver.hpGauge.GetComponent<Image>().fillAmount == 0)
+        {
+            Canvas.SetActive(true);
+            StartCoroutine("sceneTransitions");
+        }
+
+        
+    }
+    IEnumerator sceneTransitions()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Stagechoice");
     }
 }

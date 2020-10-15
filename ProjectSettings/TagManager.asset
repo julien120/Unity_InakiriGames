@@ -12,6 +12,8 @@ TagManager:
   - fishBoss
   - steakSushi
   - sushi
+  - hit
+  - hitDestroy
   layers:
   - Default
   - TransparentFX

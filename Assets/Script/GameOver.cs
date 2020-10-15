@@ -9,6 +9,7 @@ public class GameOver : MonoBehaviour
     GameObject player;
     public static GameObject hpGauge;
     public   GameObject canvass;
+
     //public GameObject hp;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,8 @@ public class GameOver : MonoBehaviour
     }
     public static void DecreaseHp()
     {
-        hpGauge.GetComponent<Image>().fillAmount -= 0.25f;
+        hpGauge.GetComponent<Image>().fillAmount -= 0.1f;
+        
 
     }
 
