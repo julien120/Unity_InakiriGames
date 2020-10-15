@@ -10,6 +10,8 @@ TagManager:
   - dead
   - waypointCollider
   - fishBoss
+  - steakSushi
+  - sushi
   layers:
   - Default
   - TransparentFX

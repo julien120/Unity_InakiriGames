@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2197050270441926707}
   m_Layer: 0
   m_Name: sushi4
-  m_TagString: Untagged
+  m_TagString: steakSushi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 0
 --- !u!114 &2197050270441926707
 MonoBehaviour:
   m_ObjectHideFlags: 0

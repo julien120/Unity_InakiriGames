@@ -7,7 +7,7 @@ public class sushiController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(40.4f,3.15f,0);
+        transform.position = new Vector3(40.4f,1f,0);
         StartCoroutine("destroy");
     }
 
@@ -19,7 +19,7 @@ public class sushiController : MonoBehaviour
 
     IEnumerator destroy()
     {
-        yield return new WaitForSeconds(9);
+        yield return new WaitForSeconds(15);
         Destroy(this);
         Debug.Log("sushi消えるよ");
     }
