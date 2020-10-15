@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class sushiController : MonoBehaviour
 {
+
+    private ParticleSystem particle;
     // Start is called before the first frame update
     void Start()
     {
         //transform.position = new Vector3(40.4f,1f,0);
         StartCoroutine("destroy");
+        particle = this.GetComponent<ParticleSystem>();
+
+        particle.Stop();
+
+
     }
 
     // Update is called once per frame
@@ -30,7 +37,7 @@ public class sushiController : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("hit"))
         {
-            this.gameObject.GetComponent<ParticleSystem>().Play();
+            particle.Play();
             StartCoroutine("hit");
         }
 

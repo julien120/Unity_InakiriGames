@@ -748,7 +748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bfc80dde178244698b57571954d5dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  middle: {x: 40.4, y: -5, z: 0}
+  middle: {x: 39.5, y: -5, z: 0}
   sushi:
   - {fileID: 6444197145705991231, guid: 0b8d8b9a02e8841ac8f7fcf4eeb01cdf, type: 3}
   - {fileID: 5177613311063491900, guid: 0610b7fa0a58b485fb5803545808561d, type: 3}
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bfc80dde178244698b57571954d5dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  middle: {x: 40.4, y: 7, z: 0}
+  middle: {x: 41.4, y: 7, z: 0}
   sushi:
   - {fileID: 6444197145705991231, guid: 0b8d8b9a02e8841ac8f7fcf4eeb01cdf, type: 3}
   - {fileID: 5177613311063491900, guid: 0610b7fa0a58b485fb5803545808561d, type: 3}

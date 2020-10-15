@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class hitController : MonoBehaviour
 {
+    public AudioClip sound;
+    public AudioClip outhit;
+    AudioSource audioSource;
+
     //public GameObject canvas;
     public void shoot(Vector3 dir)
     {
@@ -20,15 +24,19 @@ public class hitController : MonoBehaviour
         {
             StartCoroutine("hit");
             ScoreUI.steakCount += 300;
-            
+            audioSource.PlayOneShot(sound);
+
+
         }
 
         if (coll.gameObject.CompareTag("sushi"))
         {
-            Destroy(gameObject);
+            audioSource.PlayOneShot(outhit);
+            //Destroy(gameObject);
             ScoreUI.steakCount -= 300;
             GameOver.DecreaseHp();
             StartCoroutine("hit");
+           
 
 
         }
@@ -45,7 +53,7 @@ public class hitController : MonoBehaviour
     void Start()
     {
 
-
+        audioSource = GetComponent<AudioSource>();
 
     }
 

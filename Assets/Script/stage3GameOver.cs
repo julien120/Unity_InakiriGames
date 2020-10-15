@@ -19,12 +19,13 @@ public class stage3GameOver : MonoBehaviour
     {
         if(player.transform.position.y == -20)
         {
+            Debug.Log("ゲームオーバー");
             GameOverCanvas.SetActive(true);
-            StartCoroutine("Gameoover");
+            StartCoroutine("Gameooover");
         }
     }
 
-    private IEnumerator Gameoover()
+    private IEnumerator Gameooover()
     {
         yield return new WaitForSeconds(3.0f);
         SceneManager.LoadScene("StageChoice");

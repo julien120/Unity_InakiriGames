@@ -10,7 +10,7 @@ public class SushiGenrator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("LaunchProjectile", 2.0f, 3);
     }
 
     // Update is called once per frame
@@ -18,8 +18,16 @@ public class SushiGenrator : MonoBehaviour
     {
         if (Time.frameCount % 180 == 0)
         {
-           
-            Instantiate(sushi[Random.Range(0,3)], middle,Quaternion.identity);
+
+           // Instantiate(sushi[Random.Range(0, 3)], middle, Quaternion.identity);
         }
+    }
+
+    void LaunchProjectile()
+    {
+
+        Instantiate(sushi[Random.Range(0, 3)], middle, Quaternion.identity);
+
+
     }
 }
