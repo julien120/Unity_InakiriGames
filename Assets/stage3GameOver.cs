@@ -17,7 +17,7 @@ public class stage3GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.transform.position.y == -28)
+        if(player.transform.position.y == -20)
         {
             GameOverCanvas.SetActive(true);
             StartCoroutine("Gameoover");

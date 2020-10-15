@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class RewardStageScript : MonoBehaviour
 {
+    public GameObject clearCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class RewardStageScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
+            clearCanvas.SetActive(true);
             StartCoroutine("clear");
         }
     }
@@ -28,7 +29,7 @@ public class RewardStageScript : MonoBehaviour
     IEnumerator clear()
     {
 
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(4);
         SceneManager.LoadScene("StageChoice");
 
 

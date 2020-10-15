@@ -157,6 +157,8 @@ public class PlayerController : BaseCharacterController
         if (collision.gameObject.CompareTag("dead"))
         {
             Debug.Log("そくし");
+            GameObject fish = GameObject.Find("fishBoss ");
+            Destroy(fish);
             Dead();
         }
 
