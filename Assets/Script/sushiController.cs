@@ -48,6 +48,15 @@ public class sushiController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.gameObject.CompareTag("hitDestroy"))
+        {
+            Destroy(gameObject);
+            Debug.Log("画面外に出たので消滅");
+        }
+    }
+
     IEnumerator hit()
     {
         yield return new WaitForSeconds(0.5f);
