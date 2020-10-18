@@ -17,7 +17,7 @@ public class stage3GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.transform.position.y == -20)
+        if (player.transform.position.y == -20)
         {
             Debug.Log("ゲームオーバー");
             GameOverCanvas.SetActive(true);
@@ -25,9 +25,19 @@ public class stage3GameOver : MonoBehaviour
         }
     }
 
+
+    public void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.gameObject.CompareTag("Player"))
+        {
+            GameOverCanvas.SetActive(true);
+            StartCoroutine("Gameooover");
+        }
+    }
+
     private IEnumerator Gameooover()
     {
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(4.0f);
         SceneManager.LoadScene("StageChoice");
     }
    

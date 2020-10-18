@@ -34,8 +34,9 @@ public class PlayerControllers : MonoBehaviour
         ExistingNoteControllers = new List<NoteControllerBase>();
 
         //TODO: ここで譜面の読み込みを行う
-        var beatmapDirectory = Application.dataPath + "/Beatmaps";
+        var beatmapDirectory = Application.streamingAssetsPath+ "/Beatmaps";
         beatmap = new Beatmap(beatmapDirectory + "/sample3.bms");
+       
 
         //デバック用にテンポ変化をコンソールに出力
         foreach (var tempoChange in beatmap.tempoChanges)
@@ -95,10 +96,10 @@ public class PlayerControllers : MonoBehaviour
     void Update()
     {
         // 譜面停止中にスペースを押したとき
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (!isPlaying&&Input.GetKeyDown(KeyCode.Space))
         {
             
-            //TODO：コメントアウトした譜面再生
+            //：コメントアウトした譜面再生
             isPlaying = true;
             // 指定した秒数待って音源再生
             audioSource.PlayScheduled(
@@ -108,11 +109,12 @@ public class PlayerControllers : MonoBehaviour
         //譜面停止中
         if (!isPlaying)
         {
+            
             //以下二行を追加した急遽
-           // isPlaying = true;
-           // audioSource.PlayScheduled(
-           //    AudioSettings.dspTime + startOffset + beatmap.audioOffset
-           //    );
+            // isPlaying = true;
+            //audioSource.PlayScheduled(
+            //   AudioSettings.dspTime + startOffset + beatmap.audioOffset
+            //   );
             //TODO一時停止機能を設けるなら下のコメントアウト消すstartSecを更新し続ける
             startSec = Time.time;
             Debug.Log("譜面停止中");
