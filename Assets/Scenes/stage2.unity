@@ -2028,7 +2028,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1.5
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2177,7 +2177,7 @@ MonoBehaviour:
   maxHP: 3
   defaultSpeed: 10
   defaultPower: 0
-  jumpPower: 10
+  jumpPower: 9
   groundCheckObjects:
   - {fileID: 783269596}
   - {fileID: 1206225482}
@@ -2198,7 +2198,7 @@ MonoBehaviour:
   maxHP: 4
   defaultSpeed: 10
   defaultPower: 0
-  jumpPower: 10
+  jumpPower: 9
   groundCheckObjects:
   - {fileID: 783269596}
   - {fileID: 1206225482}
@@ -3165,16 +3165,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackgroundCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1285133252899031384, guid: c19c854d22dc2ca4988349be8c9b98a5,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1285133252899031384, guid: c19c854d22dc2ca4988349be8c9b98a5,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
     - target: {fileID: 1285133252899031385, guid: c19c854d22dc2ca4988349be8c9b98a5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3280,6 +3270,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1285133252899031384, guid: c19c854d22dc2ca4988349be8c9b98a5,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285133252899031384, guid: c19c854d22dc2ca4988349be8c9b98a5,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c19c854d22dc2ca4988349be8c9b98a5, type: 3}
 --- !u!224 &999155060 stripped

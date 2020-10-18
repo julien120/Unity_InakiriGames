@@ -47,7 +47,7 @@ public class fishMove : MonoBehaviour
         {
             count++;
             Debug.Log("wayポイント更新あ" + count);
-            transform.position = Vector2.MoveTowards(transform.position, waypoint[count].transform.position, 10 * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, waypoint[count].transform.position, 30 * Time.deltaTime);
         }
         if (coll.gameObject.name == "wayCollider2")
         {

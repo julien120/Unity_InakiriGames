@@ -8,7 +8,7 @@ public class ScoreUI : MonoBehaviour
     public static int steakCount;
     public Text steakUI;
     public Text rankCountUI;
-   public static int rank = 4000;
+   public static int rank = 99000;
 
     // Start is called before the first frame update
     void Start()
