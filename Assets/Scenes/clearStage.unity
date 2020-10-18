@@ -25648,16 +25648,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackgroundCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1285133252899031384, guid: c19c854d22dc2ca4988349be8c9b98a5,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1285133252899031384, guid: c19c854d22dc2ca4988349be8c9b98a5,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
     - target: {fileID: 1285133252899031385, guid: c19c854d22dc2ca4988349be8c9b98a5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25763,6 +25753,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1285133252899031384, guid: c19c854d22dc2ca4988349be8c9b98a5,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285133252899031384, guid: c19c854d22dc2ca4988349be8c9b98a5,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c19c854d22dc2ca4988349be8c9b98a5, type: 3}
 --- !u!224 &999155060 stripped
@@ -26723,7 +26723,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.01, y: 0.93}
-  m_AnchorMax: {x: 0.29, y: 1}
+  m_AnchorMax: {x: 0.6, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -27202,7 +27202,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u8089\u30DE\u30A4\u30EC\u30FC\u30B8\u7DCF\u5408\u30E9\u30F3\u30AD\u30F3\u30B0\uFF1A40000\u4F4D"
+  m_Text: "\u8089\u30DE\u30A4\u30EC\u30FC\u30B8\u7DCF\u5408\u30E9\u30F3\u30AD\u30F3\u30B0\uFF1A"
 --- !u!222 &1522477894
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27226,7 +27226,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.01, y: 0.87}
-  m_AnchorMax: {x: 0.29, y: 0.94}
+  m_AnchorMax: {x: 0.5, y: 0.94}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
